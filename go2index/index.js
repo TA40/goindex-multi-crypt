@@ -11,7 +11,7 @@ var authConfig = {
   refresh_token3: "", // 授权 token
   refresh_token4: "", // 授权 token
   refresh_token5: "", // 授权 token
-  crypt_password: ""
+  crypt_password: "",
   /**
    * 设置要显示的多个云端硬盘；按格式添加多个
    * [id]: 可以是 团队盘id、子文件夹id、或者"root"（代表个人盘根目录）；
@@ -721,7 +721,7 @@ class googleDrive {
     let res_obj = await response.json();
 
     for (var i = 0; i < res_obj["files"].length; i++) {
-        res_obj["files"][i]["id"] = CryptoJS.AES.encrypt(res_obj["files"][i]["id"], authConfig.encrypt_password).toString();
+        res_obj["files"][i]["id"] = CryptoJS.AES.encrypt(res_obj["files"][i]["id"], authConfig.crypt_password).toString();
     }
 
     return {
@@ -905,10 +905,10 @@ class googleDrive {
       "Content-Type": "application/x-www-form-urlencoded",
     };
 
-    var refresh = [];
+    var refresh = [this.authConfig.refresh_token, this.authConfig.refresh_token2, this.authConfig.refresh_token3, this.authConfig.refresh_token4, this.authConfig.refresh_token5];
     refresh = refresh.filter(item => item);
     var refresh_tmp_token = refresh[Math.floor(Math.random() * refresh.length)];
-    console.log(refresh_tmp_token);
+    //console.log(refresh_tmp_token);
 
     const post_data = {
       client_id: this.authConfig.client_id,
