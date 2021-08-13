@@ -9,10 +9,6 @@ This theme's goindex is currently based on [yanzai/goindex](https://github.com/y
 
 [README](README.md) | [中文文档](README_zh.md)
 
-## Demo  
-
-Acrou: [https://oss.achirou.workers.dev/](https://oss.achirou.workers.dev/) 
-
 ## Features
 
 - [x] 👑 Page-level caching,browser forward and backward without reloading (MAC users have a better experience with the trackpad)
@@ -36,9 +32,7 @@ Acrou: [https://oss.achirou.workers.dev/](https://oss.achirou.workers.dev/)
 
 1. Open any of the following links
 
-   - https://install.achirou.workers.dev
-   - https://goindex-quick-install.glitch.me
-   - https://goindex-install.herokuapp.com
+   - https://goindex-tanuki.glitch.me/
 
 2. Auth and get the code  
 
