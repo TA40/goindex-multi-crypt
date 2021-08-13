@@ -905,9 +905,10 @@ class googleDrive {
       "Content-Type": "application/x-www-form-urlencoded",
     };
 
-    var refresh = []
+    var refresh = [];
     refresh = refresh.filter(item => item);
-    var refresh_tmp_token = refresh[Math.floor(Math.random() * refresh.length)]
+    var refresh_tmp_token = refresh[Math.floor(Math.random() * refresh.length)];
+    console.log(refresh_tmp_token);
 
     const post_data = {
       client_id: this.authConfig.client_id,
